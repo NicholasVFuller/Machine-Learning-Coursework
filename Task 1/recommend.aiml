@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>*</pattern>
+        <template>Sorry! I have no answer for that.</template>
+    </category>
+    <category>
+	    <pattern>HELLO</pattern>
+	    <template><srai>HI</srai></template>
+    </category>
+    <category>
+	    <pattern>HEY</pattern>
+	    <template><srai>HI</srai></template>
+    </category>
+    <category>
+        <pattern>HI</pattern>
+        <template>
+        <condition name="name">
+            <li value="*">
+                <random>
+                    <li>Hi</li>
+                    <li>Hey</li>
+                    <li>Hello</li>
+                    <li>Hi there</li>
+                    <li>Hello there</li>
+                    <li>Hey There</li>
+                    <li>Howdy</li>
+                    <li>Hi-ya</li>
+                    <li>What's up</li>
+                    <li>Good day</li>
+                </random>
+                , <get name="name"/>!<br/>
+                Can I help you find a type of Computer Science job that might fit you?
+                </li>
+            <li>Hello! What is your name?</li>
+        </condition>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS MY NAME</pattern>
+        <template>Your name is <get name="name"/>.</template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT IS YOUR NAME</that>
+        <template>Nice to meet you, <set name="name"><star/></set>!<br/>
+        Can I help you find a type of Computer Science job that might fit you?
+        </template>
+    </category>
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>CAN I HELP YOU FIND A TYPE OF COMPUTER SCIENCE JOB THAT MIGHT FIT YOU</that>
+        <template>Let's do it!<br/>First question.<br/>
+        Would you like to manage teams of IT professionals?
+        </template>
+    </category>
+    <category>
+        <pattern>^ NO ^</pattern>
+        <that>CAN I HELP YOU FIND A TYPE OF COMPUTER SCIENCE JOB THAT MIGHT FIT YOU</that>
+        <template>Oh, well, have a great day!</template>
+    </category>
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>WOULD YOU LIKE TO MANAGE TEAMS OF IT PROFESSIONALS</that>
+        <template>Sounds like the role of IT Project Manager would be perfect for you! Hooray!</template>
+    </category>
+    <category>
+        <pattern>^ NO ^</pattern>
+        <that>WOULD YOU LIKE TO MANAGE TEAMS OF IT PROFESSIONALS</that>
+        <template>Okay. Would you say you obsess over pixel perfect design and clean looking applications
+        and wish you could correct bad design?</template>
+    </category>
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>WOULD YOU SAY YOU OBSESS OVER PIXEL PERFECT DESIGN AND CLEAN LOOKING APPLICATIONS
+        AND WISH YOU COULD CORRECT BAD DESIGN</that>
+        <template>Awesome! You would make a great UX Designer!</template>
+    </category>
+    <category>
+        <pattern>^ NO ^</pattern>
+        <that>WOULD YOU SAY YOU OBSESS OVER PIXEL PERFECT DESIGN AND CLEAN LOOKING APPLICATIONS
+        AND WISH YOU COULD CORRECT BAD DESIGN</that>
+        <template>No problem. Do you prefer working with languages like HTML, CSS, and JavaScript?</template>
+    </category>
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>DO YOU PREFER WORKING WITH LANGUAGES LIKE HTML, CSS, AND JAVASCRIPT</that>
+        <template>Sweet! You would most likely enjoy being a Web Developer.</template>
+    </category>
+    <category>
+        <pattern>^ NO ^</pattern>
+        <that>DO YOU PREFER WORKING WITH LANGUAGES LIKE HTML, CSS, AND JAVASCRIPT</that>
+        <template>That's alright. Are you passionate about delivering great applications to today's
+        most popular mobile devices?</template>
+    </category>
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>ARE YOU PASSIONATE ABOUT DELIVERING GREAT APPLICATIONS TO TODAY S
+        MOST POPULAR MOBILE DEVICES</that>
+        <template>Cool! Mobile App Developer is the job for you!</template>
+    </category>
+    <category>
+        <pattern>^ NO ^</pattern>
+        <that>ARE YOU PASSIONATE ABOUT DELIVERING GREAT APPLICATIONS TO TODAY S
+        MOST POPULAR MOBILE DEVICES</that>
+        <template>May I suggest you look into becoming a Software Developer?</template>
+    </category>
+</aiml>
